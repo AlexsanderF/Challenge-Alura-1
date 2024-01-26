@@ -9,19 +9,20 @@ function pegarTexto(button) {
 }
 
 function criptoOuDescripto(button, valueText) {
+    let texto = '';
     if (button.id === 'criptografar') {
-        let textoCriptografado = criptografar(valueText);
+        texto = criptografar(valueText);
 
-        if (!eVazio(textoCriptografado)) {
-            exibirTextoNaTela('#section-second-text-paragraph', textoCriptografado);
+        if (!eVazio(texto)) {
+            exibirTextoNaTela('#section-second-text-paragraph', texto);
             ocultarOuNaoElemento('section-second-div', 'none');
             ocultarOuNaoElemento('section-second-button-copy', 'inline');
         }
 
     } else {
-        let textoDescriptografado = descriptografar(valueText);
-        if (!eVazio(textoDescriptografado)) {
-            exibirTextoNaTela('#section-second-text-paragraph', textoDescriptografado);
+        texto = descriptografar(valueText);
+        if (!eVazio(texto)) {
+            exibirTextoNaTela('#section-second-text-paragraph', texto);
             ocultarOuNaoElemento('section-second-div', 'none');
             ocultarOuNaoElemento('section-second-button-copy', 'inline');
         }
