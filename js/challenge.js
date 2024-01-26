@@ -9,7 +9,7 @@ function pegarTexto(button) {
 }
 
 function criptoOuDescripto(button, valueText) {
-    let text;
+    let texto;
     if (button.id === 'criptografar') {
         texto = criptografar(valueText);
 
@@ -30,8 +30,8 @@ function criptoOuDescripto(button, valueText) {
 }
 
 function copiarTexto() {
-    var paragrafo = document.getElementById("section-second-text-paragraph");
-    var textoParaCopiar = paragrafo.textContent; //Pegar o conteúdo do paragráfo
+    let paragrafo = document.getElementById("section-second-text-paragraph");
+    let textoParaCopiar = paragrafo.textContent; //Pegar o conteúdo do paragráfo
     navigator.clipboard.writeText(textoParaCopiar).then(function () {
         if (textoParaCopiar === '') {
             alert('Não há nada para copiar.');
@@ -48,9 +48,9 @@ function criptografar(text) {
     let textoDigitado = text;
     let textoCriptografado = ''; //TEXTO TRATADO E CRIPTOGRAFADO
 
-    for (var i = 0; i < textoDigitado.length; i++) {
+    for (let i = 0; i < textoDigitado.length; i++) {
         //PEGAR LETRA POR LETRA DA PALAVRA DIGITADA
-        var letters = textoDigitado.charAt(i);
+        let letters = textoDigitado.charAt(i);
 
         if (eVogal(letters)) {
             if (letters === 'a') {
