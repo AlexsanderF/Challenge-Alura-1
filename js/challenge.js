@@ -9,7 +9,7 @@ function pegarTexto(button) {
 }
 
 function criptoOuDescripto(button, valueText) {
-    let texto = '';
+    let text;
     if (button.id === 'criptografar') {
         texto = criptografar(valueText);
 
