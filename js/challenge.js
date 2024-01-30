@@ -4,7 +4,7 @@ function pegarTexto(button) {
     copiarTexto.setSelectionRange(0, 99999); //COMPATIBILIDADE COM CELULAR
     navigator.clipboard.writeText(copiarTexto.value);
     //CRIPTOGRAGAR OU DESCRIPTOGRAFAR
-    criptoOuDescripto(button, copiarTexto.value);
+    criptoOuDescripto(button, copiarTexto.value.toLowerCase());
 
 }
 
