@@ -4,7 +4,7 @@ function pegarTexto(button) {
     copiarTexto.setSelectionRange(0, 99999); //COMPATIBILIDADE COM CELULAR
     navigator.clipboard.writeText(copiarTexto.value);
     //CRIPTOGRAGAR OU DESCRIPTOGRAFAR
-    criptoOuDescripto(button, copiarTexto.value.toLowerCase());
+    criptoOuDescripto(button, removerAcentos(copiarTexto.value.toLowerCase()));
 
 }
 
@@ -106,4 +106,8 @@ function limparTela(selector) {
 
 function ocultarOuNaoElemento(id, action) {
     document.getElementById(id).style.display = action;
+}
+
+function removerAcentos(text){
+    return text.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
 }
