@@ -8,6 +8,7 @@
     --cor-secondary: #D8DFE8;
     --cor-tertiary: #F3F5FC;
     --cor-quaternary: #495057;
+    --font-primary: "Inter", sans-serif;
 }
 
 body, html {
@@ -48,7 +49,7 @@ textarea {
 
 textarea::placeholder {
     color: var(--cor-primary);
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-primary);
     font-weight: 300;
     font-size: 2rem;
 }
@@ -118,13 +119,13 @@ textarea::placeholder {
 .section-second-div-text p strong {
     margin-top: 15.6rem;
     color: var(--cor-quaternary);
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-primary);
     font-weight: 500;
 }
 
 .section-second-div-text p {
     color: var(--cor-quaternary);
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-primary);
     font-weight: 400;
 }
 
@@ -167,7 +168,6 @@ textarea::placeholder {
         height: 100vh;
         flex-direction: column;
         gap: 5rem;
-
     }
 
     textarea {
@@ -276,7 +276,6 @@ textarea::placeholder {
     #criptografar {
         margin-right: 1.56rem;
         width: 100%;
-
     }
 
     #descriptografar {
